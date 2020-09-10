@@ -8,9 +8,11 @@ elif [ ! -d $DIR ]; then
 else
     FILENUM=$(ls -a "$DIR" | awk '{print $1}' | wc -l)
     FILELIST=$(ls -a "$DIR" | awk '{print $1}')
+    BUFFER=''
     for name in $FILELIST; do
-        echo $name" - "$(file $DIR/$name | awk -F": " '{print $2}')"\n"  
+        BUFFER=${BUFFER}$name"|"$(file $DIR/$name | awk -F": " '{print $2}')"\n"  
     done
+    echo $BUFFER | column -t -s "|"
     echo "#####################"
     echo "TOTAL FILES: $FILENUM"
 fi

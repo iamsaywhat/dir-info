@@ -6,8 +6,8 @@ if [ $# -ne 1 ]; then
 elif [ ! -d $DIR ]; then
     echo "script argument isn't directory!"
 else
-    FILENUM=$(ls -a | awk '{print $1}' | wc -l)
-    FILELIST=$(ls -a | awk '{print $1}')
+    FILENUM=$(ls -a "$DIR" | awk '{print $1}' | wc -l)
+    FILELIST=$(ls -a "$DIR" | awk '{print $1}')
     for name in $FILELIST; do
         echo $name" - "$(file $DIR/$name | awk -F": " '{print $2}')"\n"  
     done

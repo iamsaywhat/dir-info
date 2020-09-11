@@ -9,13 +9,13 @@
 ## How to use 
 
 ```
-$ sh <YOUR PATH>/dir-info/dir-info1.sh <DIR>
-$ sh <YOUR PATH>/dir-info/dir-info2.sh <DIR>
+$  <YOUR PATH>/dir-info/dir-info1.sh <DIR>
+$  <YOUR PATH>/dir-info/dir-info2.sh <DIR>
 ```
 
 ## Example
 ```
-$ sh dir-info/dir-info1.sh . 
+$ dir-info/dir-info1.sh . 
 
 dir-info - is a directory
 ff - is a file
@@ -37,7 +37,7 @@ test.cc - is a file
 ```
 
 ```
-$ sh dir-info/dir-info2.sh .
+$ dir-info/dir-info2.sh .
 
 .                     directory
 ..                    directory
